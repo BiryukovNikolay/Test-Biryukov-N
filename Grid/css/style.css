@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.main__container {
+  padding: 25px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-template-areas:
+    "a a b b b"
+    "a a b b b"
+    "a a b b b"
+    "c c c e e"
+    "c c c e e"
+    "d d d e e"
+    "d d d e e"
+    "f f f f f"
+    "f f f f f"
+    "f f f f f"
+    "g g g g g"
+    "g g g g g"
+    "h h h h h";
+}
+
+.element {
+  padding: 0 10px;
+  color: white;
+  background-color: #7e6c91;
+}
+
+.element__a {
+  grid-area: a;
+}
+
+.element__b {
+  grid-area: b;
+}
+
+.element__c {
+  grid-area: c;
+}
+
+.element__d {
+  grid-area: d;
+}
+
+.element__e {
+  grid-area: e;
+}
+
+.element__f {
+  grid-area: f;
+}
+
+.element__g {
+  grid-area: g;
+}
+
+.element__h {
+  grid-area: h;
+}
+
+@media (min-width: 768px) {
+  .main__container {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-areas:
+      "a a b b b f f g g"
+      "a a b b b f f g g"
+      "a a b b b f f g g"
+      "a a b b b f f g g"
+      "a a b b b f f g g"
+      "c c c e e f f g g"
+      "c c c e e f f g g"
+      "c c c e e f f g g"
+      "c c c e e f f g g"
+      "d d d e e f f g g"
+      "d d d e e f f h h"
+      "d d d e e f f h h"
+      "d d d e e f f h h"
+  }
+}
